@@ -4,7 +4,7 @@
 # 10. C interfaces
 
 A C interface is the stable binary boundary of a library: what another language, another compiler or another version of
-the library links against. It is written in C11 and kept small; everything behind it is C++20.
+the library links against. It is written in C11 and kept small; everything behind it is C++.
 
 ## 10.1 The header
 
@@ -83,7 +83,7 @@ example_parser_destroy(example_parser *parser);
 
 ## 10.4 The C++ side
 
-Behind the interface, the implementation is ordinary C++20 that follows the rest of this guide:
+Behind the interface, the implementation is ordinary C++ that follows the rest of this guide:
 
 ```cpp
 extern "C" auto

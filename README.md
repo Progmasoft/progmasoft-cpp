@@ -3,7 +3,7 @@
 
 # Progmasoft C++ Style
 
-Progmasoft C++ Style is a style guide for C++20. It says how code is named, laid out, structured and checked, and why,
+Progmasoft C++ Style is a style guide for C++17 and C++20. It says how code is named, laid out, structured and checked, and why,
 so that a reader can move between files and projects without relearning the conventions each time.
 
 It is written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow it,
@@ -27,7 +27,7 @@ left to the author.
 | [2. Formatting](Guide/FORMATTING.md) | the `.clang-format` profile, and what formatting leaves to the author |
 | [3. Naming](Guide/NAMING.md) | types, functions, variables, constants, namespaces, files, macros |
 | [4. Files and headers](Guide/FILES-AND-HEADERS.md) | extensions, `#pragma once`, includes, file size, the order inside a file |
-| [5. Language](Guide/LANGUAGE.md) | C++20 features: `auto`, initialization, `const`, casts, integers, templates, lambdas |
+| [5. Language](Guide/LANGUAGE.md) | Language versions and features: `auto`, initialization, `const`, casts, integers, templates, lambdas |
 | [6. Types and classes](Guide/TYPES-AND-CLASSES.md) | structs and classes, special members, inheritance, operators, enums |
 | [7. Errors](Guide/ERRORS.md) | exception-free code, `Expected` and `Error`, invariants, fatal defects |
 | [8. Ownership and memory](Guide/OWNERSHIP-AND-MEMORY.md) | RAII, smart pointers, views and their lifetimes, containers |
@@ -42,7 +42,7 @@ records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a c
 
 ## The short version
 
-- C++20, formatted by the [clang-format profile](Guide/FORMATTING.md#the-profile), checked by the
+- C++17 or C++20, formatted by the [clang-format profile](Guide/FORMATTING.md#the-profile), checked by the
   [clang-tidy profile](Guide/TOOLING.md#132-the-clang-tidy-profile) with every warning an error.
 - `PascalCase` for types, functions and namespaces; `camelCase` for variables and parameters; `name_` for private data
   members; `kPascalCase` for constants and enumerators; `UPPER_SNAKE_CASE` for macros.
