@@ -27,7 +27,7 @@ never lets one cross a C interface or escape a destructor. Third-party code keep
 ## 7.2 `Expected<T>` and `Error`
 
 A function that produces a value or fails returns `Expected<T>`; one that only succeeds or fails returns `Error`. The guide
-does not prescribe the library. `llvm::Expected<T>` and `llvm::Error` suit code that already depends on LLVM; a C++20
+does not prescribe the library. `llvm::Expected<T>` and `llvm::Error` suit code that already depends on LLVM; a
 backport of `std::expected` (such as `tl::expected`) or a small type of the project's own suit the rest, and C++23's
 `std::expected` replaces them once a project moves to it. What matters is the discipline below: the failure is in the
 signature, it cannot be ignored, and it carries a message.

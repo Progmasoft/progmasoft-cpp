@@ -7,6 +7,10 @@ A revision of the guide is named by its date. A change that requires existing co
 
 ## Unreleased
 
+The guide covers C++17 as well as C++20. A project picks one; C++20 stays the default, and C++17 is for libraries meant
+for other people's projects. [Section 5.13](Guide/LANGUAGE.md#513-c17-projects) lists the C++17 form of each C++20
+feature the guide uses. Existing C++20 projects need no change.
+
 ## 2026-10-18
 
 The first revision of Progmasoft C++ Style. It writes down the conventions of the Progmasoft C++ projects and decides

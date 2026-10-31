@@ -15,7 +15,7 @@ as errors, in a CI job of its own.
 ### Flags
 
 ```text
--std=c++20
+-std=c++20    # -std=c++17 in a C++17 project
 -fno-exceptions
 -Wall -Wextra -Wpedantic -Werror
 -Wshadow
@@ -36,7 +36,7 @@ as errors, in a CI job of its own.
 -Wcomma
 ```
 
-With `clang-cl`, each flag is passed as `/clang:<flag>`, and the language standard as `/std:c++20`.
+With `clang-cl`, each flag is passed as `/clang:<flag>`, and the language standard as `/std:c++20` or `/std:c++17`.
 
 These flags apply to first-party code only. Third-party code is compiled with its own options; its headers are included
 as system headers (`-isystem`, or the build tool's equivalent), so their warnings do not fail the build.

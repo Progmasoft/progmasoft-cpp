@@ -21,6 +21,8 @@ Deviations of this project are listed below.
 Do not copy the rules into the project. A copy drifts from the guide, and two documents that disagree are worse than
 one.
 
+State the language version in the same section, C++20 or C++17; [the guide says how to choose](Guide/LANGUAGE.md).
+
 ## 2. Copy the profiles
 
 | File | From |

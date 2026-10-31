@@ -101,7 +101,7 @@ A type that must not be copied deletes the copy operations explicitly instead of
 - Overload an operator only when it means what it means for built-in types: `+` adds, `==` compares for equality, `[]`
   indexes. A reader must never wonder what `a << b` does to `a`.
 - **Default comparisons**: `operator==` and, when there is an order, `operator<=>`, both `= default` where memberwise
-  comparison is right.
+  comparison is right. [C++17 has neither](LANGUAGE.md#513-c17-projects).
 - Binary operators that are symmetric are hidden friends or non-members, so both operands convert the same way.
 - No overloads of `&&`, `||`, `,` or unary `&`.
 
