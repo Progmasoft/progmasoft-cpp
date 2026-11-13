@@ -5,12 +5,12 @@
 
 Copyright 2026 Progmasoft.
 
-The text of Progmasoft C++ Style is licensed under the
+The text of Progmasoft C/C++ Styles is licensed under the
 [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
 You may share and adapt it for any purpose, including commercially, as long as you give appropriate credit, link to
 the license and say whether you changed it. A credit line such as this one is enough:
 
-> Based on [Progmasoft C++ Style](https://github.com/Progmasoft/progmasoft-cpp), CC BY 4.0.
+> Based on [Progmasoft C/C++ Styles](https://github.com/Progmasoft/progmasoft-cpp), CC BY 4.0.
 
 **Configuration and code examples are dedicated to the public domain** under
 [CC0 1.0 Universal](LICENSES/CC0-1.0.md). This covers every fenced code block in this repository: the `.clang-format`

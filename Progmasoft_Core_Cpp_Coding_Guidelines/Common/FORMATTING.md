@@ -5,7 +5,7 @@
 
 Formatting is mechanical, so a tool does it. Every C++ file is formatted by `clang-format` with the profile below, and
 CI fails when a file is not. Nobody formats by hand, and nobody argues about a formatting choice in a review: a change
-to the profile is a change to this guide.
+to the profile is a change to these guidelines.
 
 ## The shape of the code
 
@@ -62,7 +62,7 @@ CI, because two versions can format the same file differently.
 ---
 Language: Cpp
 BasedOnStyle: LLVM
-Standard: c++20 # c++17 in a C++17 project
+Standard: c++20 # c++17 in a C++17 project; see the page of the version
 
 UseTab: Never
 IndentWidth: 4

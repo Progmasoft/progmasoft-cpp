@@ -1,0 +1,37 @@
+{
+  "title": "Progmasoft Core C++ Coding Guidelines",
+  "license": "CC-BY-4.0",
+  "standards": [
+    {
+      "id": "cpp20",
+      "name": "C++20",
+      "default": true,
+      "for": "applications, and libraries used inside one product",
+      "documents": ["Cpp20/LANGUAGE.md"]
+    },
+    {
+      "id": "cpp17",
+      "name": "C++17",
+      "default": false,
+      "for": "libraries meant for other people's projects",
+      "documents": ["Cpp17/LANGUAGE.md"]
+    }
+  ],
+  "documents": [
+    { "id": "principles", "chapter": 1, "title": "Principles", "path": "Common/PRINCIPLES.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "formatting", "chapter": 2, "title": "Formatting", "path": "Common/FORMATTING.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "naming", "chapter": 3, "title": "Naming", "path": "Common/NAMING.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "files-and-headers", "chapter": 4, "title": "Files and headers", "path": "Common/FILES-AND-HEADERS.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "language", "chapter": 5, "title": "Language", "path": "Common/LANGUAGE.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "types-and-classes", "chapter": 6, "title": "Types and classes", "path": "Common/TYPES-AND-CLASSES.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "errors", "chapter": 7, "title": "Errors", "path": "Common/ERRORS.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "ownership-and-memory", "chapter": 8, "title": "Ownership and memory", "path": "Common/OWNERSHIP-AND-MEMORY.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "comments-and-documentation", "chapter": 9, "title": "Comments and documentation", "path": "Common/COMMENTS-AND-DOCUMENTATION.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "c-interfaces", "chapter": 10, "title": "C interfaces", "path": "Common/C-INTERFACES.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "concurrency", "chapter": 11, "title": "Concurrency", "path": "Common/CONCURRENCY.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "testing", "chapter": 12, "title": "Testing", "path": "Common/TESTING.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "tooling", "chapter": 13, "title": "Tooling", "path": "Common/TOOLING.md", "standards": ["cpp17", "cpp20"] },
+    { "id": "cpp20", "title": "C++20", "path": "Cpp20/LANGUAGE.md", "standards": ["cpp20"] },
+    { "id": "cpp17", "title": "C++17", "path": "Cpp17/LANGUAGE.md", "standards": ["cpp17"] }
+  ]
+}
