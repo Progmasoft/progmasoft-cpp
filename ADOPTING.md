@@ -3,8 +3,8 @@
 
 # Adopting the guide
 
-A project adopts Progmasoft Core C++ Coding Guidelines by pointing to them, copying its two tool profiles and writing down, once, where it
-deviates.
+A project adopts Progmasoft Core C++ Coding Guidelines by pointing to them, copying their two tool profiles and
+writing down, once, where it deviates.
 
 ## 1. Point to the guide
 
