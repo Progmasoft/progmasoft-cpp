@@ -15,7 +15,7 @@ as errors, in a CI job of its own.
 ### Flags
 
 ```text
--std=c++20    # -std=c++17 in a C++17 project
+-std=c++20    # -std=c++17 in a C++17 project: see Cpp20/ and Cpp17/
 -fno-exceptions
 -Wall -Wextra -Wpedantic -Werror
 -Wshadow

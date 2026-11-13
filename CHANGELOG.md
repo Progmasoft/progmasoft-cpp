@@ -7,8 +7,13 @@ A revision of the guide is named by its date. A change that requires existing co
 
 ## Unreleased
 
+The guide moved to `Progmasoft_Core_Cpp_Coding_Guidelines/`. `Common/` holds the thirteen chapters, which apply to both versions;
+`Cpp20/` and `Cpp17/` hold what applies to one version: the rules that use C++20 features, and their C++17 form with
+the checks a C++17 library needs. `index.json` lists every document with its chapter and versions. No rule changed;
+links to `Guide/` move to `Progmasoft_Core_Cpp_Coding_Guidelines/Common/`.
+
 The guide covers C++17 as well as C++20. A project picks one; C++20 stays the default, and C++17 is for libraries meant
-for other people's projects. [Section 5.13](Guide/LANGUAGE.md#513-c17-projects) lists the C++17 form of each C++20
+for other people's projects. [The C++17 page](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp17/LANGUAGE.md) lists the C++17 form of each C++20
 feature the guide uses. Existing C++20 projects need no change.
 
 ## 2026-10-18

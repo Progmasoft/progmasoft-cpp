@@ -21,15 +21,17 @@ Deviations of this project are listed below.
 Do not copy the rules into the project. A copy drifts from the guide, and two documents that disagree are worse than
 one.
 
-State the language version in the same section, C++20 or C++17; [the guide says how to choose](Guide/LANGUAGE.md).
+State the language version in the same section, C++20 or C++17; [the guide says how to choose](Progmasoft_Core_Cpp_Coding_Guidelines/Common/LANGUAGE.md), and
+the project follows the page of its version ([C++20](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp20/LANGUAGE.md),
+[C++17](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp17/LANGUAGE.md)).
 
 ## 2. Copy the profiles
 
 | File | From |
 | --- | --- |
-| `.clang-format` | [Formatting: the profile](Guide/FORMATTING.md#the-profile) |
-| `.clang-tidy` | [Tooling: the clang-tidy profile](Guide/TOOLING.md#132-the-clang-tidy-profile), with the path filters set to the project's directories |
-| compiler flags | [Tooling: flags](Guide/TOOLING.md#flags), in the build files of the project |
+| `.clang-format` | [Formatting: the profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md#the-profile) |
+| `.clang-tidy` | [Tooling: the clang-tidy profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#132-the-clang-tidy-profile), with the path filters set to the project's directories |
+| compiler flags | [Tooling: flags](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#flags), in the build files of the project |
 
 The profiles are in the public domain (see [LICENSE.md](LICENSE.md)), so they can be copied under the project's own
 license. Note the guide revision they come from in a comment at the top of each file, so a later update can be compared.

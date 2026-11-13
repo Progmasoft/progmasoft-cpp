@@ -49,7 +49,7 @@ design, names, ownership, and whether the change does what it says.
 
 A project that adopts this guide over existing code converges gradually. A file follows the guide where it is touched;
 a mechanical sweep is its own change, never mixed into a behavior change. Where a project deliberately deviates, it
-writes the deviation down once (see [Adopting the guide](../ADOPTING.md)), and then the project's rule wins in that
+writes the deviation down once (see [Adopting the guide](../../ADOPTING.md)), and then the project's rule wins in that
 project.
 
 ## 1.8 Small, explicit dependencies

@@ -62,7 +62,7 @@ CI, because two versions can format the same file differently.
 ---
 Language: Cpp
 BasedOnStyle: LLVM
-Standard: c++20 # c++17 in a C++17 project
+Standard: c++20 # c++17 in a C++17 project; see the page of the version
 
 UseTab: Never
 IndentWidth: 4

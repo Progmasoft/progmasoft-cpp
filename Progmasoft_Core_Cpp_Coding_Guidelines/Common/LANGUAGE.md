@@ -5,14 +5,12 @@
 
 The guide covers two language versions, and a project picks one:
 
-- **C++20** is the default, for applications and for libraries used inside one product.
-- **C++17** is for a library meant for other people's projects, because C++17 is still the widest common target and code
-  written for it also works in every later standard. A C++20 library would leave those users out.
+- **[C++20](../Cpp20/LANGUAGE.md)** is the default, for applications and for libraries used inside one product.
+- **[C++17](../Cpp17/LANGUAGE.md)** is for a library meant for other people's projects, because C++17 is still the
+  widest common target and code written for it also works in every later standard.
 
-A project builds with exactly its version, `-std=c++20` or `-std=c++17`, and no compiler extensions (`-Wpedantic` is on).
-Its deviations do not change the version: a C++17 project uses no C++20 feature, even where a compiler accepts one.
-A feature of a later standard is used only through a library that provides it, such as `llvm::Expected` in place of
-`std::expected`. [Section 5.13](#513-c17-projects) gives the C++17 form of what the other sections write in C++20.
+A project builds with exactly its version and no compiler extensions. Its deviations do not change the version. This
+chapter holds the rules of both versions; the page of each version adds what uses its own features.
 
 ## 5.1 Functions
 
@@ -68,8 +66,9 @@ Never `auto` for a variable that is meant to be a different type from the initia
 - **Braces for initialization, parentheses for a constructor that braces would hide.** `std::vector<int> values(3, 0)`
   makes three zeros; `std::vector<int> values{3, 0}` makes the list `{3, 0}`. Use parentheses only where braces would
   select an `std::initializer_list` constructor you do not want.
-- **Designated initializers** name the fields of an aggregate: `Edge{.from = a, .to = b}`. Use them whenever an aggregate
-  has more than two fields or two fields of the same type.
+- **Aggregates with many fields** are initialized so that each value names its field: designated initializers in
+  [C++20](../Cpp20/LANGUAGE.md#initialization), assignments after default construction in
+  [C++17](../Cpp17/LANGUAGE.md#the-c17-form-of-the-c20-rules).
 - **No narrowing.** Brace initialization refuses it; with `=` and parentheses, write the conversion out.
 
 ## 5.4 `const` and `constexpr`
@@ -77,7 +76,7 @@ Never `auto` for a variable that is meant to be a different type from the initia
 - **`const` by default.** A local that does not change is `const`; a member function that does not change the object is
   `const`; a pointer or reference parameter that is only read points to `const`.
 - **`constexpr` for every value known at compile time**, and for functions that can be evaluated at compile time without
-  contortion. `consteval` when a function must only run at compile time.
+  contortion. C++20 adds [`consteval` and `constinit`](../Cpp20/LANGUAGE.md#compile-time-code).
 - **`inline constexpr`** for a constant in a header. `constexpr` on a static data member already implies `inline`.
 - Do not `const`-qualify a by-value parameter in a declaration; it means nothing to the caller. It may be `const` in the
   definition.
@@ -87,7 +86,8 @@ Never `auto` for a variable that is meant to be a different type from the initia
 ## 5.5 Casts and conversions
 
 - **No C-style casts and no functional casts** for anything but constructing a value of class type. Use
-  `static_cast` for a value conversion, `std::bit_cast` to reinterpret the bits of a trivially copyable value, and
+  `static_cast` for a value conversion, the version's way to reinterpret the bits of a trivially copyable value
+  ([C++20](../Cpp20/LANGUAGE.md#casts), [C++17](../Cpp17/LANGUAGE.md#the-c17-form-of-the-c20-rules)), and
   `reinterpret_cast` only at a byte or ABI boundary, with a comment saying why the cast is valid.
 - **No implicit conversion between integer widths or signedness.** `-Wimplicit-int-conversion` and the clang-tidy
   profile reject them; write the `static_cast` and make sure it cannot lose a value, or check that it cannot.
@@ -113,8 +113,8 @@ Never `auto` for a variable that is meant to be a different type from the initia
 - Text is UTF-8 in `std::string`. Take a read-only string parameter as `std::string_view` (or `llvm::StringRef` in code
   built on LLVM). Do not use `std::wstring`, `wchar_t`, or `std::u8string` in an interface.
 - Convert to a platform encoding only at the platform boundary, such as a Windows wide-character API.
-- Format with `std::format`-style or `llvm::formatv`-style functions, or by streaming into a string builder; never with
-  `sprintf` into a fixed buffer.
+- Format with a formatting library ([`std::format` in C++20](../Cpp20/LANGUAGE.md#formatting-text), `fmt` in C++17) or
+  `llvm::formatv`, or by streaming into a string builder; never with `sprintf` into a fixed buffer.
 - A view parameter must not be stored. A member that keeps text owns a `std::string`.
 
 ## 5.8 Enumerations
@@ -134,15 +134,13 @@ A `switch` over an enumeration lists every enumerator and has no `default`, so t
 enumerator needs. When a value may come from outside the program, convert it to the enumeration with a function that
 validates it.
 
-## 5.9 Templates and concepts
+## 5.9 Templates
 
-- **Constrain every template** with a concept or a `requires` clause instead of SFINAE: `template<std::integral Id>`.
-  The error then names the requirement, not a substitution failure deep inside.
-- **Name a concept for a requirement used more than once.** Concepts are `PascalCase` nouns or adjectives:
-  `Hashable`, `ByteRange`.
+- **Constrain every template**: with a concept in [C++20](../Cpp20/LANGUAGE.md#templates-and-concepts), with a named
+  trait in [C++17](../Cpp17/LANGUAGE.md#the-c17-form-of-the-c20-rules). The error then names the requirement.
 - **Keep templates thin.** Move the part that does not depend on the template parameters into a non-template function,
   to keep compile times and code size down.
-- **No template metaprogramming where `constexpr` code would do.** An `if constexpr` branch or a `consteval` function is
+- **No template metaprogramming where `constexpr` code would do.** An `if constexpr` branch or a `constexpr` function is
   easier to read than a recursive specialization.
 
 ## 5.10 Lambdas
@@ -159,16 +157,14 @@ validates it.
 - **No `goto`.**
 - **Range-based `for`** whenever the index is not needed. When it is, iterate with `std::size_t`.
 - **`[[fallthrough]]`** marks every intended fall-through in a `switch`; `-Wimplicit-fallthrough` rejects the rest.
-- **Ranges and algorithms** where they state the intent better than a loop: `std::ranges::sort(items)`,
-  `std::ranges::any_of(...)`. A plain loop is better than a pipeline of five views that needs a comment to explain.
-- **`[[likely]]` and `[[unlikely]]`** only where a measurement showed a difference.
+- **Algorithms** where they state the intent better than a loop; C++20 adds
+  [ranges](../Cpp20/LANGUAGE.md#ranges-views-and-algorithms). A plain loop is better than a chain that needs a comment
+  to explain.
 
 ## 5.12 Features not used
 
 | Feature | Instead |
 | --- | --- |
-| C++20 modules | headers; build-tool support is not yet uniform across the supported compilers |
-| Coroutines | explicit state machines or callbacks, until a project adopts a coroutine library deliberately |
 | RTTI: `dynamic_cast`, `typeid` | `std::variant` and `std::visit`, a kind enumeration, or LLVM-style `isa`/`cast`/`dyn_cast` |
 | Exceptions | see [Errors](ERRORS.md) |
 | `std::bind` | a lambda |
@@ -177,34 +173,4 @@ validates it.
 | `alloca`, `setjmp`/`longjmp` | ordinary allocation and returns |
 | User-defined literals | named functions or constructors, except the standard ones such as `std::chrono` suffixes |
 
-## 5.13 C++17 projects
-
-The rest of this guide applies unchanged. Where a section uses a C++20 feature, a C++17 project writes this instead:
-
-| C++20 | C++17 |
-| --- | --- |
-| Concepts and `requires` | a named trait, `kIsInteger<Type>`, used by `std::enable_if_t` in a defaulted template parameter; `static_assert` when no overload depends on it |
-| `operator==` and `operator<=>` `= default` | written out over `std::tie` of all fields, with a test that fails when a field is left out |
-| Designated initializers | default construct, then assign the fields; a factory function when this repeats |
-| `std::span` | `const std::vector<T> &`, or a view such as `llvm::ArrayRef` where the project has one |
-| `std::ranges` | the iterator algorithms: `std::sort(items.begin(), items.end())` |
-| `std::bit_cast` | `static_cast` between integers, `std::memcpy` into a value otherwise |
-| `consteval`, `constinit` | `constexpr` |
-| Template lambdas | a function template in a `Detail` namespace |
-| `std::erase_if` | erase-remove: `items.erase(std::remove_if(...), items.end())` |
-| `contains`, `starts_with`, `ends_with` | `find`, `compare` or `substr` |
-| `std::remove_cvref_t`, `std::identity` | one small header of the project, with a comment naming what it stands for |
-| `std::format` | `fmt`, or streaming |
-| `std::jthread` | `std::thread`, joined explicitly |
-| `using enum` | qualified enumerators |
-| `[[likely]]`, `[[unlikely]]` | nothing |
-
-Code written for C++17 is promised to later standards too, so its checks have to reach them:
-
-- **CI builds and tests in C++17 and in the newest standard the project supports.** A rule of C++20 can reject C++17 code,
-  such as the rewritten comparison operators.
-- **CI builds with each compiler the project supports, not only Clang.** Clang accepts designated initializers in C++17
-  and warns; MSVC rejects them. Clang's `-Wc++20-extensions` shows most of these before CI does.
-- **Headers compile under the default modes of the compilers.** MSVC is permissive in C++17 unless `/permissive-` is
-  given, and a user of the library may not give it. A non-capturing lambda that reads a local `constexpr`, for instance,
-  is an error there.
+The features C++20 adds that the guide does not use are on the [C++20 page](../Cpp20/LANGUAGE.md#not-used).

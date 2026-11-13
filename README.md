@@ -23,27 +23,38 @@ left to the author.
 
 | Chapter | Covers |
 | --- | --- |
-| [1. Principles](Guide/PRINCIPLES.md) | what the guide optimizes for, and how to decide a case it does not cover |
-| [2. Formatting](Guide/FORMATTING.md) | the `.clang-format` profile, and what formatting leaves to the author |
-| [3. Naming](Guide/NAMING.md) | types, functions, variables, constants, namespaces, files, macros |
-| [4. Files and headers](Guide/FILES-AND-HEADERS.md) | extensions, `#pragma once`, includes, file size, the order inside a file |
-| [5. Language](Guide/LANGUAGE.md) | Language versions and features: `auto`, initialization, `const`, casts, integers, templates, lambdas |
-| [6. Types and classes](Guide/TYPES-AND-CLASSES.md) | structs and classes, special members, inheritance, operators, enums |
-| [7. Errors](Guide/ERRORS.md) | exception-free code, `Expected` and `Error`, invariants, fatal defects |
-| [8. Ownership and memory](Guide/OWNERSHIP-AND-MEMORY.md) | RAII, smart pointers, views and their lifetimes, containers |
-| [9. Comments and documentation](Guide/COMMENTS-AND-DOCUMENTATION.md) | Doxygen, what a comment is for, TODOs |
-| [10. C interfaces](Guide/C-INTERFACES.md) | C11 headers, `extern "C"`, prefixes, ownership across the boundary |
-| [11. Concurrency](Guide/CONCURRENCY.md) | threads, locks, atomics, thread-safety annotations |
-| [12. Testing](Guide/TESTING.md) | unit tests, fuzzing, sanitizers, benchmarks |
-| [13. Tooling](Guide/TOOLING.md) | compiler flags, the `.clang-tidy` profile, CI checks |
+| [1. Principles](Progmasoft_Core_Cpp_Coding_Guidelines/Common/PRINCIPLES.md) | what the guide optimizes for, and how to decide a case it does not cover |
+| [2. Formatting](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md) | the `.clang-format` profile, and what formatting leaves to the author |
+| [3. Naming](Progmasoft_Core_Cpp_Coding_Guidelines/Common/NAMING.md) | types, functions, variables, constants, namespaces, files, macros |
+| [4. Files and headers](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FILES-AND-HEADERS.md) | extensions, `#pragma once`, includes, file size, the order inside a file |
+| [5. Language](Progmasoft_Core_Cpp_Coding_Guidelines/Common/LANGUAGE.md) | Language versions and features: `auto`, initialization, `const`, casts, integers, templates, lambdas |
+| [6. Types and classes](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TYPES-AND-CLASSES.md) | structs and classes, special members, inheritance, operators, enums |
+| [7. Errors](Progmasoft_Core_Cpp_Coding_Guidelines/Common/ERRORS.md) | exception-free code, `Expected` and `Error`, invariants, fatal defects |
+| [8. Ownership and memory](Progmasoft_Core_Cpp_Coding_Guidelines/Common/OWNERSHIP-AND-MEMORY.md) | RAII, smart pointers, views and their lifetimes, containers |
+| [9. Comments and documentation](Progmasoft_Core_Cpp_Coding_Guidelines/Common/COMMENTS-AND-DOCUMENTATION.md) | Doxygen, what a comment is for, TODOs |
+| [10. C interfaces](Progmasoft_Core_Cpp_Coding_Guidelines/Common/C-INTERFACES.md) | C11 headers, `extern "C"`, prefixes, ownership across the boundary |
+| [11. Concurrency](Progmasoft_Core_Cpp_Coding_Guidelines/Common/CONCURRENCY.md) | threads, locks, atomics, thread-safety annotations |
+| [12. Testing](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TESTING.md) | unit tests, fuzzing, sanitizers, benchmarks |
+| [13. Tooling](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md) | compiler flags, the `.clang-tidy` profile, CI checks |
+
+Each version has a page of its own with the rules that use its features:
+
+| Version | Covers |
+| --- | --- |
+| [C++20](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp20/LANGUAGE.md) | the default: concepts, designated initializers, defaulted comparisons, ranges, `std::span`, `std::format` |
+| [C++17](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp17/LANGUAGE.md) | for libraries used by other projects: the C++17 form of each C++20 rule, and the checks for later standards |
+
+The guide is in `Progmasoft_Core_Cpp_Coding_Guidelines/`: `Common/` holds what applies to both versions, `Cpp20/` and `Cpp17/` what
+applies to one. [`index.json`](Progmasoft_Core_Cpp_Coding_Guidelines/index.json) lists every document with its chapter and the versions it
+applies to, for tools that show or check the guide.
 
 [Adopting the guide](ADOPTING.md) explains how a project points to this guide, which files it copies and how it
 records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a change to a rule.
 
 ## The short version
 
-- C++17 or C++20, formatted by the [clang-format profile](Guide/FORMATTING.md#the-profile), checked by the
-  [clang-tidy profile](Guide/TOOLING.md#132-the-clang-tidy-profile) with every warning an error.
+- C++17 or C++20, formatted by the [clang-format profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md#the-profile), checked by the
+  [clang-tidy profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#132-the-clang-tidy-profile) with every warning an error.
 - `PascalCase` for types, functions and namespaces; `camelCase` for variables and parameters; `name_` for private data
   members; `kPascalCase` for constants and enumerators; `UPPER_SNAKE_CASE` for macros.
 - Four spaces, braces on their own line, 80 columns, the return type on its own line.
