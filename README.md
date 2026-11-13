@@ -7,8 +7,8 @@ Progmasoft Core C++ Coding Guidelines are the coding guidelines of Progmasoft fo
 is named, laid out, structured and checked, and why, so that a reader can move between files and projects without
 relearning the conventions each time.
 
-It is written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow it,
-among them the [Tala compiler](https://github.com/Progmasoft/tala) and [Catch3](https://github.com/Progmasoft/catch3).
+They are written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow
+them, among them [Catch3](https://github.com/Progmasoft/catch3) and [Tazelish](https://github.com/Progmasoft/tazelish).
 
 ## How to read it
 
