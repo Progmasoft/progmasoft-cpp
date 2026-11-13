@@ -7,6 +7,8 @@ A revision of the guide is named by its date. A change that requires existing co
 
 ## Unreleased
 
+The guide is named Progmasoft Core C++ Coding Guidelines; it was Progmasoft C++ Style.
+
 The guide moved to `Progmasoft_Core_Cpp_Coding_Guidelines/`. `Common/` holds the thirteen chapters, which apply to both versions;
 `Cpp20/` and `Cpp17/` hold what applies to one version: the rules that use C++20 features, and their C++17 form with
 the checks a C++17 library needs. `index.json` lists every document with its chapter and versions. No rule changed;

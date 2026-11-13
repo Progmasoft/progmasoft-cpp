@@ -3,7 +3,7 @@
 
 # Contributing
 
-Progmasoft C++ Style changes when a rule turns out to be wrong, unclear or missing. Proposals are welcome from anyone,
+Progmasoft Core C++ Coding Guidelines change when a rule turns out to be wrong, unclear or missing. Proposals are welcome from anyone,
 whether or not they work on a Progmasoft project.
 
 ## Proposing a change

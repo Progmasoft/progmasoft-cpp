@@ -3,7 +3,7 @@
 
 # Adopting the guide
 
-A project adopts Progmasoft C++ Style by pointing to it, copying its two tool profiles and writing down, once, where it
+A project adopts Progmasoft Core C++ Coding Guidelines by pointing to them, copying its two tool profiles and writing down, once, where it
 deviates.
 
 ## 1. Point to the guide
@@ -13,7 +13,7 @@ Add a short section to the project's contributing guide:
 ```markdown
 ## C++ style
 
-C++ code follows [Progmasoft C++ Style](https://github.com/Progmasoft/progmasoft-cpp).
+C++ code follows [Progmasoft Core C++ Coding Guidelines](https://github.com/Progmasoft/progmasoft-cpp).
 `clang-format` and `clang-tidy` enforce what they can; review covers the rest.
 Deviations of this project are listed below.
 ```

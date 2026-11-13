@@ -1,10 +1,11 @@
 <!-- SPDX-FileCopyrightText: 2026 Progmasoft <support@progmasoft.com> -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
-# Progmasoft C++ Style
+# Progmasoft Core C++ Coding Guidelines
 
-Progmasoft C++ Style is a style guide for C++17 and C++20. It says how code is named, laid out, structured and checked, and why,
-so that a reader can move between files and projects without relearning the conventions each time.
+Progmasoft Core C++ Coding Guidelines are the coding guidelines of Progmasoft for C++17 and C++20. They say how code
+is named, laid out, structured and checked, and why, so that a reader can move between files and projects without
+relearning the conventions each time.
 
 It is written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow it,
 among them the [Tala compiler](https://github.com/Progmasoft/tala) and [Catch3](https://github.com/Progmasoft/catch3).
