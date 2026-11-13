@@ -1,16 +1,22 @@
 <!-- SPDX-FileCopyrightText: 2026 Progmasoft <support@progmasoft.com> -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
-# Progmasoft Core C++ Coding Guidelines
+# Progmasoft C/C++ Styles
 
-Progmasoft Core C++ Coding Guidelines are the coding guidelines of Progmasoft for C++17 and C++20. They say how code
-is named, laid out, structured and checked, and why, so that a reader can move between files and projects without
-relearning the conventions each time.
+Progmasoft C/C++ Styles holds the coding guidelines of Progmasoft for C and C++. They say how code is named, laid out,
+structured and checked, and why, so that a reader can move between files and projects without relearning the
+conventions each time.
+
+| Guidelines | Languages | State |
+| --- | --- | --- |
+| [Progmasoft Core C++ Coding Guidelines](#progmasoft-core-c-coding-guidelines) | C++17, C++20 | written |
+| `Progmasoft_Core_C_Coding_Guidelines/` | C11 | not written yet |
+| `Progmasoft_TalaComponents_Cpp_Coding_Guidelines/` | C++17 | not written yet |
 
 They are written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow
 them, among them [Catch3](https://github.com/Progmasoft/catch3) and [Tazelish](https://github.com/Progmasoft/tazelish).
 
-## How to read it
+## How to read them
 
 Each rule is short and states what to do. Most come with the reason, because a rule whose reason is known can be
 applied to a case it did not foresee. Examples show the preferred form first; a form marked **Avoid** shows what the
@@ -20,7 +26,11 @@ The words follow [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) in spirit: *
 **should** is the default that a good reason, written down next to the code, may override, and **may** is a choice
 left to the author.
 
-## Contents
+## Progmasoft Core C++ Coding Guidelines
+
+The guidelines for C++17 and C++20, in `Progmasoft_Core_Cpp_Coding_Guidelines/`.
+
+### Contents
 
 | Chapter | Covers |
 | --- | --- |
@@ -52,7 +62,7 @@ applies to, for tools that show or check the guide.
 [Adopting the guide](ADOPTING.md) explains how a project points to this guide, which files it copies and how it
 records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a change to a rule.
 
-## The short version
+### The short version
 
 - C++17 or C++20, formatted by the [clang-format profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md#the-profile), checked by the
   [clang-tidy profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#132-the-clang-tidy-profile) with every warning an error.
