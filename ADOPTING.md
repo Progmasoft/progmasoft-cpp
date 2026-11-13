@@ -1,12 +1,12 @@
 <!-- SPDX-FileCopyrightText: 2026 Progmasoft <support@progmasoft.com> -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
-# Adopting the guide
+# Adopting Progmasoft Core C++ Coding Guidelines
 
 A project adopts Progmasoft Core C++ Coding Guidelines by pointing to them, copying their two tool profiles and
 writing down, once, where it deviates.
 
-## 1. Point to the guide
+## 1. Point to the guidelines
 
 Add a short section to the project's contributing guide:
 
@@ -18,11 +18,12 @@ C++ code follows [Progmasoft Core C++ Coding Guidelines](https://github.com/Prog
 Deviations of this project are listed below.
 ```
 
-Do not copy the rules into the project. A copy drifts from the guide, and two documents that disagree are worse than
-one.
+Do not copy the rules into the project. A copy drifts from the guidelines, and two documents that disagree are worse
+than one.
 
-State the language version in the same section, C++20 or C++17; [the guide says how to choose](Progmasoft_Core_Cpp_Coding_Guidelines/Common/LANGUAGE.md), and
-the project follows the page of its version ([C++20](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp20/LANGUAGE.md),
+State the language version in the same section, C++20 or C++17; [the guidelines say how to
+choose](Progmasoft_Core_Cpp_Coding_Guidelines/Common/LANGUAGE.md), and the project follows the page of its version
+([C++20](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp20/LANGUAGE.md),
 [C++17](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp17/LANGUAGE.md)).
 
 ## 2. Copy the profiles
@@ -34,7 +35,8 @@ the project follows the page of its version ([C++20](Progmasoft_Core_Cpp_Coding_
 | compiler flags | [Tooling: flags](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#flags), in the build files of the project |
 
 The profiles are in the public domain (see [LICENSE.md](LICENSE.md)), so they can be copied under the project's own
-license. Note the guide revision they come from in a comment at the top of each file, so a later update can be compared.
+license. Note the revision of the guidelines they come from in a comment at the top of each file, so a later update can
+be compared.
 
 ## 3. Record the deviations
 
@@ -50,16 +52,16 @@ use exceptions because its host does. List them in the contributing guide, each 
   (Errors, 7.1).
 ```
 
-Within the project, its documented rule wins over the guide. An undocumented difference is not a deviation; it is code
-that has not caught up yet.
+Within the project, its documented rule wins over the guidelines. An undocumented difference is not a deviation; it is
+code that has not caught up yet.
 
 ## 4. Converge gradually
 
-Existing code is not rewritten in one sweep. A file follows the guide where it is changed. A purely mechanical change,
-such as applying `clang-format` to a directory or renaming a member convention, is its own pull request, never mixed
-with a change in behavior, so that review and `git blame` stay useful.
+Existing code is not rewritten in one sweep. A file follows the guidelines where it is changed. A purely mechanical
+change, such as applying `clang-format` to a directory or renaming a member convention, is its own pull request, never
+mixed with a change in behavior, so that review and `git blame` stay useful.
 
-## Projects that follow the guide
+## Projects that follow the guidelines
 
 | Project | Deviations recorded in |
 | --- | --- |

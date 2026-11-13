@@ -34,7 +34,7 @@ The guidelines for C++17 and C++20, in `Progmasoft_Core_Cpp_Coding_Guidelines/`.
 
 | Chapter | Covers |
 | --- | --- |
-| [1. Principles](Progmasoft_Core_Cpp_Coding_Guidelines/Common/PRINCIPLES.md) | what the guide optimizes for, and how to decide a case it does not cover |
+| [1. Principles](Progmasoft_Core_Cpp_Coding_Guidelines/Common/PRINCIPLES.md) | what the guidelines optimize for, and how to decide a case they do not cover |
 | [2. Formatting](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md) | the `.clang-format` profile, and what formatting leaves to the author |
 | [3. Naming](Progmasoft_Core_Cpp_Coding_Guidelines/Common/NAMING.md) | types, functions, variables, constants, namespaces, files, macros |
 | [4. Files and headers](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FILES-AND-HEADERS.md) | extensions, `#pragma once`, includes, file size, the order inside a file |
@@ -55,17 +55,19 @@ Each version has a page of its own with the rules that use its features:
 | [C++20](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp20/LANGUAGE.md) | the default: concepts, designated initializers, defaulted comparisons, ranges, `std::span`, `std::format` |
 | [C++17](Progmasoft_Core_Cpp_Coding_Guidelines/Cpp17/LANGUAGE.md) | for libraries used by other projects: the C++17 form of each C++20 rule, and the checks for later standards |
 
-The guide is in `Progmasoft_Core_Cpp_Coding_Guidelines/`: `Common/` holds what applies to both versions, `Cpp20/` and `Cpp17/` what
-applies to one. [`index.json`](Progmasoft_Core_Cpp_Coding_Guidelines/index.json) lists every document with its chapter and the versions it
-applies to, for tools that show or check the guide.
+The guidelines are in `Progmasoft_Core_Cpp_Coding_Guidelines/`: `Common/` holds what applies to both versions, `Cpp20/`
+and `Cpp17/` what applies to one. [`index.json`](Progmasoft_Core_Cpp_Coding_Guidelines/index.json) lists every document
+with its chapter and the versions it applies to, for tools that show or check the guidelines.
 
-[Adopting the guide](ADOPTING.md) explains how a project points to this guide, which files it copies and how it
+[Adopting the guidelines](ADOPTING.md) explains how a project points to them, which files it copies and how it
 records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a change to a rule.
 
 ### The short version
 
-- C++17 or C++20, formatted by the [clang-format profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md#the-profile), checked by the
-  [clang-tidy profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#132-the-clang-tidy-profile) with every warning an error.
+- C++17 or C++20, formatted by the [clang-format
+  profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/FORMATTING.md#the-profile), checked by the [clang-tidy
+  profile](Progmasoft_Core_Cpp_Coding_Guidelines/Common/TOOLING.md#132-the-clang-tidy-profile) with every warning an
+  error.
 - `PascalCase` for types, functions and namespaces; `camelCase` for variables and parameters; `name_` for private data
   members; `kPascalCase` for constants and enumerators; `UPPER_SNAKE_CASE` for macros.
 - Four spaces, braces on their own line, 80 columns, the return type on its own line.
@@ -74,7 +76,7 @@ records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a c
 - No `using namespace`. No exceptions in libraries and tools: recoverable failures return `Expected<T>` or `Error`.
 - Ownership is visible in the type: values and `std::unique_ptr` own, references and views borrow.
 - Every public declaration has a `///` comment, in US English.
-- Tests sit next to the code they test; sanitizers and fuzzers run in CI. The guide prescribes no test, fuzzing or
+- Tests sit next to the code they test; sanitizers and fuzzers run in CI. The guidelines prescribe no test, fuzzing or
   benchmark framework, and no error library: it prescribes how they are used.
 
 ## License

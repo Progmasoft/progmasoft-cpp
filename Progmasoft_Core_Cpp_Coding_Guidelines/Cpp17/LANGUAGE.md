@@ -43,8 +43,8 @@ Where the [C++20 page](../Cpp20/LANGUAGE.md) uses a C++20 feature, a C++17 proje
 
 Code written for C++17 is promised to later standards too, so its checks have to reach them:
 
-- **CI builds and tests in C++17 and in the newest standard the project supports.** A rule of C++20 can reject C++17 code,
-  such as the rewritten comparison operators.
+- **CI builds and tests in C++17 and in the newest standard the project supports.** A rule of C++20 can reject C++17
+  code, such as the rewritten comparison operators.
 - **CI builds with each compiler the project supports, not only Clang.** Clang accepts designated initializers in C++17
   and warns; MSVC rejects them. Clang's `-Wc++20-extensions` shows most of these before CI does.
 - **Headers compile under the default modes of the compilers.** MSVC is permissive in C++17 unless `/permissive-` is

@@ -3,7 +3,8 @@
 
 # 13. Tooling
 
-The guide relies on tools for everything that can be checked mechanically. A project that adopts it turns them all on,
+The guidelines rely on tools for everything that can be checked mechanically. A project that adopts them turns the
+tools all on,
 with warnings as errors, in CI and in the local build alike.
 
 ## 13.1 Compiler
@@ -128,11 +129,11 @@ CheckOptions:
 | --- | --- |
 | `bugprone-easily-swappable-parameters` | flags most functions with two parameters of one type; [strong types](TYPES-AND-CLASSES.md#67-strong-types) address the real risk |
 | `bugprone-exception-escape` | meaningless when exceptions are disabled |
-| `portability-avoid-pragma-once` | the guide uses `#pragma once` on purpose |
-| `modernize-use-auto` | the guide writes types that carry information ([Language](LANGUAGE.md#52-auto)) |
+| `portability-avoid-pragma-once` | the guidelines use `#pragma once` on purpose |
+| `modernize-use-auto` | the guidelines write types that carry information ([Language](LANGUAGE.md#52-auto)) |
 | `modernize-use-emplace` | `push_back` of a constructed value is clearer and equally fast after a move |
-| `modernize-use-trailing-return-type` | the guide uses trailing return types, but not for `void` functions, which the check would rewrite |
-| `readability-braces-around-statements` | braces are required by the guide; the check's fix-its fight `clang-format` |
+| `modernize-use-trailing-return-type` | the guidelines use trailing return types, but not for `void` functions, which the check would rewrite |
+| `readability-braces-around-statements` | braces are required by the guidelines; the check's fix-its fight `clang-format` |
 | `readability-function-size`, `readability-magic-numbers` | judged in review; the fixed thresholds produce more noise than findings |
 | `readability-qualified-auto` | conflicts with writing `auto` for pointers returned by APIs whose type is obvious |
 | `readability-redundant-member-init` | aggregate members keep an explicit `{}` so aggregate initialization that omits trailing fields stays clean under `-Wmissing-field-initializers` |

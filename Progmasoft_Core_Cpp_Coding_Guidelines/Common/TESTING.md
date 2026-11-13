@@ -4,7 +4,7 @@
 # 12. Testing
 
 A change that alters behavior comes with a test that fails without it. A bug fix comes with the test that reproduces the
-bug. Tests are code: they follow this guide, they are reviewed, and a flaky test is a bug.
+bug. Tests are code: they follow these guidelines, they are reviewed, and a flaky test is a bug.
 
 ## 12.1 Unit tests
 
@@ -23,7 +23,7 @@ bug. Tests are code: they follow this guide, they are reviewed, and a flaky test
   recorded seed, so a failure can be reproduced.
 - **Fast**: a unit test runs in milliseconds. A slow scenario is a separate, labeled test target.
 
-The guide does not prescribe a test framework. Catch2, [Catch3](https://github.com/Progmasoft/catch3), GoogleTest,
+The guidelines do not prescribe a test framework. Catch2, [Catch3](https://github.com/Progmasoft/catch3), GoogleTest,
 doctest and others all fit; choose one per project and use it everywhere in that project. The example below uses the
 Catch2-style API:
 

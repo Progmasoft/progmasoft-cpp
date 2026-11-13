@@ -3,7 +3,7 @@
 
 # 5. Language
 
-The guide covers two language versions, and a project picks one:
+The guidelines cover two language versions, and a project picks one:
 
 - **[C++20](../Cpp20/LANGUAGE.md)** is the default, for applications and for libraries used inside one product.
 - **[C++17](../Cpp17/LANGUAGE.md)** is for a library meant for other people's projects, because C++17 is still the
@@ -173,4 +173,4 @@ validates it.
 | `alloca`, `setjmp`/`longjmp` | ordinary allocation and returns |
 | User-defined literals | named functions or constructors, except the standard ones such as `std::chrono` suffixes |
 
-The features C++20 adds that the guide does not use are on the [C++20 page](../Cpp20/LANGUAGE.md#not-used).
+The features C++20 adds that the guidelines do not use are on the [C++20 page](../Cpp20/LANGUAGE.md#not-used).

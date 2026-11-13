@@ -83,7 +83,7 @@ example_parser_destroy(example_parser *parser);
 
 ## 10.4 The C++ side
 
-Behind the interface, the implementation is ordinary C++ that follows the rest of this guide:
+Behind the interface, the implementation is ordinary C++ that follows the rest of these guidelines:
 
 ```cpp
 extern "C" auto

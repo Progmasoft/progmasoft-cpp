@@ -3,8 +3,8 @@
 
 # 1. Principles
 
-Every rule in this guide serves one of the principles below. When the guide says nothing about a case, decide by them,
-in this order.
+Every rule in these guidelines serves one of the principles below. When the guidelines say nothing about a case, decide
+by them, in this order.
 
 ## 1.1 Correct before fast, and both before clever
 
@@ -45,12 +45,12 @@ Formatting, naming of members, include order and a long list of bug patterns are
 `clang-tidy` and the compiler, with warnings as errors. A review then spends its attention on what tools cannot judge:
 design, names, ownership, and whether the change does what it says.
 
-## 1.7 Consistency within a project beats consistency with the guide
+## 1.7 Consistency within a project beats consistency with the guidelines
 
-A project that adopts this guide over existing code converges gradually. A file follows the guide where it is touched;
-a mechanical sweep is its own change, never mixed into a behavior change. Where a project deliberately deviates, it
-writes the deviation down once (see [Adopting the guide](../../ADOPTING.md)), and then the project's rule wins in that
-project.
+A project that adopts these guidelines over existing code converges gradually. A file follows the guidelines where it is
+touched; a mechanical sweep is its own change, never mixed into a behavior change. Where a project deliberately
+deviates, it writes the deviation down once (see [Adopting the guidelines](../../ADOPTING.md)), and then the project's
+rule wins in that project.
 
 ## 1.8 Small, explicit dependencies
 

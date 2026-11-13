@@ -26,9 +26,9 @@ never lets one cross a C interface or escape a destructor. Third-party code keep
 
 ## 7.2 `Expected<T>` and `Error`
 
-A function that produces a value or fails returns `Expected<T>`; one that only succeeds or fails returns `Error`. The guide
-does not prescribe the library. `llvm::Expected<T>` and `llvm::Error` suit code that already depends on LLVM; a
-backport of `std::expected` (such as `tl::expected`) or a small type of the project's own suit the rest, and C++23's
+A function that produces a value or fails returns `Expected<T>`; one that only succeeds or fails returns `Error`. The
+guidelines does not prescribe the library. `llvm::Expected<T>` and `llvm::Error` suit code that already depends on LLVM;
+a backport of `std::expected` (such as `tl::expected`) or a small type of the project's own suit the rest, and C++23's
 `std::expected` replaces them once a project moves to it. What matters is the discipline below: the failure is in the
 signature, it cannot be ignored, and it carries a message.
 
@@ -89,7 +89,8 @@ An invariant is something the program's own logic guarantees. A broken invariant
 input, and there is no meaningful way to continue.
 
 - **`assert`** checks an invariant that is cheap to state, in debug builds. It never checks input, never has a side
-  effect, and its message is a condition a reader understands: `assert(index < blocks_.size() && "block id out of range")`.
+  effect, and its message is a condition a reader understands: `assert(index < blocks_.size() && "block id out of
+  range")`.
 - **An always-on check** (a project macro that prints and calls `std::abort`, or `llvm::report_fatal_error`) guards
   an invariant whose
   violation would corrupt memory or produce wrong output in a release build, such as a verifier disagreeing with
