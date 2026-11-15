@@ -85,7 +85,7 @@ records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a c
 The guidelines for C11, in `Progmasoft_Core_C_Coding_Guidelines/`. They are a style of their own, not the C part of the
 C++ guidelines: a C interface of a C++ library follows the C++ guidelines, a C project follows these.
 
-### Contents
+### Contents of the C guidelines
 
 | Chapter | Covers |
 | --- | --- |
@@ -104,7 +104,7 @@ C++ guidelines: a C interface of a C++ library follows the C++ guidelines, a C p
 With one version, the chapters are all in `C11/`. [`index.json`](Progmasoft_Core_C_Coding_Guidelines/index.json) lists
 them in the same form as the C++ index.
 
-### The short version
+### The C guidelines in short
 
 - ISO C11 with `-pedantic-errors`, no extensions but `#pragma once` and `extern "C"`; Clang, `clang-format` and
   `clang-tidy` 23.

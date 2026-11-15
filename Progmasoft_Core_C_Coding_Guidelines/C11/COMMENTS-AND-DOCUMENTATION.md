@@ -43,8 +43,8 @@ The parts come in this order; a part that is not needed is left out:
 8. `@deprecated`
 9. `@see`
 
-`@param` and `@return` lines stand together, with no blank line between them; other parts may be separated by an empty
-` *` line.
+`@param` and `@return` lines stand together, with no blank line between them; other parts may be separated by a
+line that holds only the `*` of the comment.
 
 ```c
 /**
