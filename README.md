@@ -11,7 +11,7 @@ conventions each time.
 | --- | --- | --- |
 | [Progmasoft Core C++ Coding Guidelines](#progmasoft-core-c-coding-guidelines) | C++17, C++20 | written |
 | `Progmasoft_Core_C_Coding_Guidelines/` | C11 | not written yet |
-| `Progmasoft_TalaComponents_Cpp_Coding_Guidelines/` | C++17 | not written yet |
+| `Progmasoft_Chene_Cpp_Coding_Guidelines/` | C++20 | not written yet |
 
 They are written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow
 them, among them [Catch3](https://github.com/Progmasoft/catch3) and [Tazelish](https://github.com/Progmasoft/tazelish).
