@@ -7,6 +7,10 @@ A revision of Progmasoft C/C++ Styles is named by its date. A change that requir
 
 ## Unreleased
 
+Naming 3.4 no longer allows a short lowercase namespace for a heavily used data model: every namespace is
+`PascalCase` under the project's root. A project that keeps such a namespace records it as a deviation (Adopting, 3).
+The examples name Catch3's namespaces.
+
 The repository is named Progmasoft C/C++ Styles, and its C++ guide Progmasoft Core C++ Coding Guidelines; both
 were Progmasoft C++ Style.
 

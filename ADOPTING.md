@@ -46,8 +46,6 @@ use exceptions because its host does. List them in the contributing guide, each 
 ```markdown
 ### Deviations
 
-- The intermediate representations use the lowercase namespaces `tala::core`, `tala::xpp` and `tala::xmm`, because
-  they are qualified on almost every line of the compiler (Naming, 3.4).
 - Assertion failures are reported by throwing, as the Catch2 API requires; exceptions stay inside the library
   (Errors, 7.1).
 ```
@@ -65,5 +63,4 @@ mixed with a change in behavior, so that review and `git blame` stay useful.
 
 | Project | Deviations recorded in |
 | --- | --- |
-| [Progmasoft/tala](https://github.com/Progmasoft/tala) | `Documents/Contributing/STYLE-AND-LICENSING.md` |
 | [Progmasoft/catch3](https://github.com/Progmasoft/catch3) | the Progmasoft-authored sources under `src/Progmasoft/`; code derived from Catch2 keeps its upstream style |
