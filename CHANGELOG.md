@@ -7,6 +7,10 @@ A revision of Progmasoft C/C++ Styles is named by its date. A change that requir
 
 ## Unreleased
 
+`index.json` names its JSON Schema,
+[schemastore.progmasoft.com/json/progmasoft-cpp-index.json](https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json),
+in `$schema`; editors check the file against it.
+
 `Progmasoft_Chene_Cpp_Coding_Guidelines/` (C++20, not written yet) takes the place of the former C++17 component
 guidelines folder.
 

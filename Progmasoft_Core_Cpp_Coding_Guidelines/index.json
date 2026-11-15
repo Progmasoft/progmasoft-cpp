@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json",
   "title": "Progmasoft Core C++ Coding Guidelines",
   "license": "CC-BY-4.0",
   "standards": [

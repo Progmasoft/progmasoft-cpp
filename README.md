@@ -57,7 +57,8 @@ Each version has a page of its own with the rules that use its features:
 
 The guidelines are in `Progmasoft_Core_Cpp_Coding_Guidelines/`: `Common/` holds what applies to both versions, `Cpp20/`
 and `Cpp17/` what applies to one. [`index.json`](Progmasoft_Core_Cpp_Coding_Guidelines/index.json) lists every document
-with its chapter and the versions it applies to, for tools that show or check the guidelines.
+with its chapter and the versions it applies to, for tools that show or check the guidelines; its schema is
+[schemastore.progmasoft.com/json/progmasoft-cpp-index.json](https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json).
 
 [Adopting the guidelines](ADOPTING.md) explains how a project points to them, which files it copies and how it
 records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a change to a rule.
