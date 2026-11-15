@@ -10,7 +10,7 @@ of thing a name is before they look it up; the words tell them what it is for.
 
 | Kind | Style | Example |
 | --- | --- | --- |
-| Namespace | `PascalCase` | `Progmasoft::Tala::Analysis` |
+| Namespace | `PascalCase` | `Progmasoft::Catch3::Runner` |
 | Class, struct, union, enum, concept, type alias | `PascalCase` | `ControlFlowGraph`, `using BlockId = std::uint32_t;` |
 | Template type parameter | `PascalCase` | `template<typename Value>` |
 | Function, member function, static member function | `PascalCase` | `AnalyzeLiveness`, `graph.BlockCount()`, `Rectangle::Create` |
@@ -62,17 +62,13 @@ pointee is the subject.
 ## 3.4 Namespaces
 
 A project's code lives under one root namespace named for the organization or the project, then one level per product
-and component: `Progmasoft::Tala::Backend::LLVM`. Use C++17 nested namespace definitions:
-`namespace Progmasoft::Tala::Analysis`.
+and component: `Progmasoft::Catch3::Runner`. Use C++17 nested namespace definitions:
+`namespace Progmasoft::Catch3::Runner`.
 
 Each component owns one namespace and every name in it. Two components do not add declarations to the same namespace.
 
 An implementation detail that must be visible in a header, such as a helper of a template, lives in a nested `Detail`
 namespace, which callers must not use.
-
-A project may keep a short lowercase namespace for a stable data model that is used heavily and qualified often, such
-as an intermediate representation (`tala::core`, `tala::xpp`). This is a deliberate, documented exception, not a second
-convention.
 
 ## 3.5 Files
 
