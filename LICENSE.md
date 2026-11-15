@@ -14,7 +14,7 @@ the license and say whether you changed it. A credit line such as this one is en
 
 **Configuration and code examples are dedicated to the public domain** under
 [CC0 1.0 Universal](LICENSES/CC0-1.0.md). This covers every fenced code block in this repository: the `.clang-format`
-and `.clang-tidy` profiles, the compiler flags, and the C++ examples. Copy them into your own projects without credit
+and `.clang-tidy` profiles, the compiler flags, and the C and C++ examples. Copy them into your own projects without credit
 and under any license.
 
 The legal code of CC BY 4.0 follows. The legal code of CC0 is in [LICENSES/CC0-1.0.md](LICENSES/CC0-1.0.md).

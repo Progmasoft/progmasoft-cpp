@@ -10,7 +10,7 @@ conventions each time.
 | Guidelines | Languages | State |
 | --- | --- | --- |
 | [Progmasoft Core C++ Coding Guidelines](#progmasoft-core-c-coding-guidelines) | C++17, C++20 | written |
-| `Progmasoft_Core_C_Coding_Guidelines/` | C11 | not written yet |
+| [Progmasoft Core C Coding Guidelines](#progmasoft-core-c-coding-guidelines) | C11 | written |
 | `Progmasoft_Chene_Cpp_Coding_Guidelines/` | C++20 | not written yet |
 
 They are written for anyone who wants a complete, opinionated rule set to adopt. Progmasoft's own C++ projects follow
@@ -79,6 +79,44 @@ records a deviation. [Contributing](CONTRIBUTING.md) explains how to propose a c
 - Every public declaration has a `///` comment, in US English.
 - Tests sit next to the code they test; sanitizers and fuzzers run in CI. The guidelines prescribe no test, fuzzing or
   benchmark framework, and no error library: it prescribes how they are used.
+
+## Progmasoft Core C Coding Guidelines
+
+The guidelines for C11, in `Progmasoft_Core_C_Coding_Guidelines/`. They are a style of their own, not the C part of the
+C++ guidelines: a C interface of a C++ library follows the C++ guidelines, a C project follows these.
+
+### Contents of the C guidelines
+
+| Chapter | Covers |
+| --- | --- |
+| [1. Principles](Progmasoft_Core_C_Coding_Guidelines/C11/PRINCIPLES.md) | C11 and LLVM 23, how the rules are worded, what tools check and what review checks |
+| [2. Formatting](Progmasoft_Core_C_Coding_Guidelines/C11/FORMATTING.md) | the `.clang-format` profile, and the forms it cannot produce |
+| [3. Naming](Progmasoft_Core_C_Coding_Guidelines/C11/NAMING.md) | prefixes for scope, storage, pointers and parameters; modules; what function names mean |
+| [4. Files and headers](Progmasoft_Core_C_Coding_Guidelines/C11/FILES-AND-HEADERS.md) | file and directory names, `#pragma once`, `extern "C"`, includes |
+| [5. Control flow](Progmasoft_Core_C_Coding_Guidelines/C11/CONTROL-FLOW.md) | conditions, `return`, loops, `switch`, `goto` |
+| [6. Declarations and initializers](Progmasoft_Core_C_Coding_Guidelines/C11/DECLARATIONS-AND-INITIALIZERS.md) | declarations, `typedef`, literals, initializers |
+| [7. Preprocessor](Progmasoft_Core_C_Coding_Guidelines/C11/PREPROCESSOR.md) | conditions and macros |
+| [8. Memory and ownership](Progmasoft_Core_C_Coding_Guidelines/C11/MEMORY-AND-OWNERSHIP.md) | ownership contracts, `malloc` and `realloc`, growing and freeing |
+| [9. Language](Progmasoft_Core_C_Coding_Guidelines/C11/LANGUAGE.md) | extensions, `bool`, `restrict`, `_Atomic`, `_Static_assert` and the other C11 features |
+| [10. Comments and documentation](Progmasoft_Core_C_Coding_Guidelines/C11/COMMENTS-AND-DOCUMENTATION.md) | comments, Doxygen and the order of its parts |
+| [11. Tooling](Progmasoft_Core_C_Coding_Guidelines/C11/TOOLING.md) | the `.clang-tidy` profile, commands, what review checks |
+
+With one version, the chapters are all in `C11/`. [`index.json`](Progmasoft_Core_C_Coding_Guidelines/index.json) lists
+them in the same form as the C++ index.
+
+### The C guidelines in short
+
+- ISO C11 with `-pedantic-errors`, no extensions but `#pragma once` and `extern "C"`; Clang, `clang-format` and
+  `clang-tidy` 23.
+- Eight spaces, 100 columns, the return type on its own line, braces on their own line, and no braces around a body of
+  one statement. `if(`, `return (value);`, `int* pValue`, `values[ index ]`.
+- `camelCase` locals with `g`, `s` and one `p` per pointer level as prefixes (`gspUser`); parameters `aCount`,
+  `aIn_pData`, `aOut_pResult`; functions and tags `PascalCase`; `typedef` `tPascalCase`; enumerators `kPascalCase`;
+  macros `UPPER_SNAKE_CASE`; public names prefixed by their module, `Example_List_Create`.
+- Files named after their module, `example/Example.List.h`.
+- Ownership in names and contracts: `Create` and `Destroy`, `Init` and `Deinit`; `realloc` through a temporary pointer;
+  no allocation of zero bytes; sizes checked for overflow.
+- Every function documented with Doxygen, at its declaration and its definition.
 
 ## License
 

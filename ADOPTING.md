@@ -59,6 +59,12 @@ Existing code is not rewritten in one sweep. A file follows the guidelines where
 change, such as applying `clang-format` to a directory or renaming a member convention, is its own pull request, never
 mixed with a change in behavior, so that review and `git blame` stay useful.
 
+## C projects
+
+A C project adopts [Progmasoft Core C Coding Guidelines](Progmasoft_Core_C_Coding_Guidelines/C11/PRINCIPLES.md) the same way: it points to them in its
+contributing guide, copies [the `.clang-format` profile](Progmasoft_Core_C_Coding_Guidelines/C11/FORMATTING.md#the-profile) and [the `.clang-tidy`
+profile](Progmasoft_Core_C_Coding_Guidelines/C11/TOOLING.md#111-the-clang-tidy-profile), and records its deviations.
+
 ## Projects that follow the guidelines
 
 | Project | Deviations recorded in |
