@@ -7,6 +7,10 @@ A revision of Progmasoft C/C++ Styles is named by its date. A change that requir
 
 ## Unreleased
 
+Progmasoft Core C Coding Guidelines are written, for C11 with LLVM 23, in
+`Progmasoft_Core_C_Coding_Guidelines/C11/`: eleven chapters, a `.clang-format` and a `.clang-tidy` profile, and an
+`index.json`. They are a style of their own; the C interfaces of C++ libraries keep following the C++ guidelines.
+
 `index.json` names its JSON Schema,
 [schemastore.progmasoft.com/json/progmasoft-cpp-index.json](https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json),
 in `$schema`; editors check the file against it.

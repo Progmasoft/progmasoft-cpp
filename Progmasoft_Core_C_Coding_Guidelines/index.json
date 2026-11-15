@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json",
+  "title": "Progmasoft Core C Coding Guidelines",
+  "license": "CC-BY-4.0",
+  "standards": [
+    {
+      "id": "c11",
+      "name": "C11",
+      "default": true,
+      "for": "every C project",
+      "documents": [
+        "C11/PRINCIPLES.md",
+        "C11/FORMATTING.md",
+        "C11/NAMING.md",
+        "C11/FILES-AND-HEADERS.md",
+        "C11/CONTROL-FLOW.md",
+        "C11/DECLARATIONS-AND-INITIALIZERS.md",
+        "C11/PREPROCESSOR.md",
+        "C11/MEMORY-AND-OWNERSHIP.md",
+        "C11/LANGUAGE.md",
+        "C11/COMMENTS-AND-DOCUMENTATION.md",
+        "C11/TOOLING.md"
+      ]
+    }
+  ],
+  "documents": [
+    { "id": "principles", "chapter": 1, "title": "Principles", "path": "C11/PRINCIPLES.md", "standards": ["c11"] },
+    { "id": "formatting", "chapter": 2, "title": "Formatting", "path": "C11/FORMATTING.md", "standards": ["c11"] },
+    { "id": "naming", "chapter": 3, "title": "Naming", "path": "C11/NAMING.md", "standards": ["c11"] },
+    { "id": "files-and-headers", "chapter": 4, "title": "Files and headers", "path": "C11/FILES-AND-HEADERS.md", "standards": ["c11"] },
+    { "id": "control-flow", "chapter": 5, "title": "Control flow", "path": "C11/CONTROL-FLOW.md", "standards": ["c11"] },
+    { "id": "declarations-and-initializers", "chapter": 6, "title": "Declarations and initializers", "path": "C11/DECLARATIONS-AND-INITIALIZERS.md", "standards": ["c11"] },
+    { "id": "preprocessor", "chapter": 7, "title": "Preprocessor", "path": "C11/PREPROCESSOR.md", "standards": ["c11"] },
+    { "id": "memory-and-ownership", "chapter": 8, "title": "Memory and ownership", "path": "C11/MEMORY-AND-OWNERSHIP.md", "standards": ["c11"] },
+    { "id": "language", "chapter": 9, "title": "Language", "path": "C11/LANGUAGE.md", "standards": ["c11"] },
+    { "id": "comments-and-documentation", "chapter": 10, "title": "Comments and documentation", "path": "C11/COMMENTS-AND-DOCUMENTATION.md", "standards": ["c11"] },
+    { "id": "tooling", "chapter": 11, "title": "Tooling", "path": "C11/TOOLING.md", "standards": ["c11"] }
+  ]
+}
