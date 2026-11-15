@@ -16,7 +16,7 @@
 ## 5.2 Returning
 
 - **A function may return from several places.**
-- **A returned value is written in parentheses**: `return(expression);`.
+- **A returned value is written in parentheses**: `return (expression);`.
 - **A `void` function may return early with `return;`**, but should not end with one.
 
 ## 5.3 Loops
@@ -72,6 +72,6 @@ FillBuffer(size_t aSize)
 
 gotoFailed:
         free(pBuffer);
-        return(result);
+        return (result);
 }
 ```

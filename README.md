@@ -109,7 +109,7 @@ them in the same form as the C++ index.
 - ISO C11 with `-pedantic-errors`, no extensions but `#pragma once` and `extern "C"`; Clang, `clang-format` and
   `clang-tidy` 23.
 - Eight spaces, 100 columns, the return type on its own line, braces on their own line, and no braces around a body of
-  one statement. `if(`, `return(value);`, `int* pValue`, `values[ index ]`.
+  one statement. `if(`, `return (value);`, `int* pValue`, `values[ index ]`.
 - `camelCase` locals with `g`, `s` and one `p` per pointer level as prefixes (`gspUser`); parameters `aCount`,
   `aIn_pData`, `aOut_pResult`; functions and tags `PascalCase`; `typedef` `tPascalCase`; enumerators `kPascalCase`;
   macros `UPPER_SNAKE_CASE`; public names prefixed by their module, `Example_List_Create`.

@@ -45,7 +45,7 @@ bool
 Example_List_Append(Example_List_tList* aInOut_pList, int aValue)
 {
         if(aInOut_pList == NULL)
-                return(false);
+                return (false);
 
         if(aInOut_pList->count == aInOut_pList->capacity)
         {
@@ -56,18 +56,18 @@ Example_List_Append(Example_List_tList* aInOut_pList, int aValue)
                 else
                 {
                         if(aInOut_pList->capacity > SIZE_MAX / 2U)
-                                return(false);
+                                return (false);
 
                         newCapacity = aInOut_pList->capacity * 2U;
                 }
 
                 if(newCapacity > SIZE_MAX / sizeof(*aInOut_pList->pValues))
-                        return(false);
+                        return (false);
 
                 int* pTemporary = realloc(aInOut_pList->pValues, newCapacity * sizeof(*pTemporary));
 
                 if(pTemporary == NULL)
-                        return(false);
+                        return (false);
 
                 aInOut_pList->pValues  = pTemporary;
                 aInOut_pList->capacity = newCapacity;
@@ -76,7 +76,7 @@ Example_List_Append(Example_List_tList* aInOut_pList, int aValue)
         aInOut_pList->pValues[ aInOut_pList->count ] = aValue;
         aInOut_pList->count++;
 
-        return(true);
+        return (true);
 }
 ```
 

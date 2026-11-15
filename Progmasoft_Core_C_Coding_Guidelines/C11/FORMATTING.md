@@ -14,9 +14,9 @@ int
 CalculateResult(int aFirstValue, int aSecondValue)
 {
         if(aFirstValue < 0)
-                return(-1);
+                return (-1);
 
-        return(aFirstValue + aSecondValue);
+        return (aFirstValue + aSecondValue);
 }
 
 void
@@ -60,8 +60,8 @@ else
 ## 2.4 Parentheses and spaces
 
 - **No space between `if`, `for`, `while` or `switch` and its `(`**: `if(`, `else if(`, `switch(state)`.
-- **`return` with a value writes it in parentheses**: `return(result);`. A `void` function may return early with
-  `return;`.
+- **`return` with a value writes it in parentheses, after one space**: `return (result);`, the form
+  `clang-format` writes. A `void` function may return early with `return;`.
 - **One space after each comma.**
 - **Binary arithmetic, bitwise, comparison and assignment operators have a space on each side.** A unary operator (`!`,
   `~`, `+`, `-`, `*`, `&`, `++`, `--`) sticks to its operand.
@@ -239,8 +239,6 @@ ReflowComments: false
 `clang-format` 23 cannot express every rule above. These are checked in review, and the formatter's output is
 corrected where it differs:
 
-- **`return(value)`**: `clang-format` puts a space after `return` whatever the profile says, and writes
-  `return (value);`.
 - **Compound literals**: `SpaceAfterCStyleCast` also puts a space before the `{` of a compound literal,
   `(Example_tUserData) { 0 }`.
 - **An empty `do` body**: `do`, then `{ } while(condition);` is split into `{` and `} while(condition);`.
