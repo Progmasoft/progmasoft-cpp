@@ -122,3 +122,5 @@ them in the same form as the C++ index.
 
 The text is licensed under [CC BY 4.0](LICENSE.md). The configuration files and code examples are dedicated to the
 public domain under [CC0 1.0](LICENSES/CC0-1.0.md), so they can be copied into any project without credit.
+The configuration files and code examples are also covered by the [Progmasoft Patent Grant 1.1](PATENTS.md): CC0 1.0
+waives copyright, not patent rights.
