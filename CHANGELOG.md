@@ -15,8 +15,7 @@ Progmasoft Core C Coding Guidelines are written, for C11 with LLVM 23, in
 [schemastore.progmasoft.com/json/progmasoft-cpp-index.json](https://schemastore.progmasoft.com/json/progmasoft-cpp-index.json),
 in `$schema`; editors check the file against it.
 
-`Progmasoft_Chene_Cpp_Coding_Guidelines/` (C++20, not written yet) takes the place of the former C++17 component
-guidelines folder.
+The former C++17 component guidelines folder is removed.
 
 Naming 3.4 no longer allows a short lowercase namespace for a heavily used data model: every namespace is
 `PascalCase` under the project's root. A project that keeps such a namespace records it as a deviation (Adopting, 3).
