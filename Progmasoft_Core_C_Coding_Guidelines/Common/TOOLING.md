@@ -58,8 +58,6 @@ few where the guidelines are right and the formatter is not ([Formatting](FORMAT
 - A valid value before the first read; each macro parameter evaluated once.
 - `realloc` through a temporary pointer, no allocation of zero bytes, overflow checks on sizes, ownership.
 - Module prefixes of public names, include paths, and file and directory names that match the module.
-- In GNU99, only [the listed extensions](../Gnu99/LANGUAGE.md#the-extensions-it-allows), and none in a public header but
-  the listed attributes.
 - The line breaks the formatter cannot make, the blank lines around `goto` labels, and the forms in
   [What the tool leaves to you](FORMATTING.md#what-the-tool-leaves-to-you).
 

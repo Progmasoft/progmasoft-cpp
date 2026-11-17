@@ -7,7 +7,7 @@ The guidelines cover two versions of C. A project names its version in its contr
 
 - **[C11](../C11/LANGUAGE.md)** is the default, for every C project: ISO C11, with no language extensions.
 - **[GNU99](../Gnu99/LANGUAGE.md)** is for code that joins a codebase built as GNU99, such as firmware or kernel code,
-  or that needs one of the GNU extensions its page lists. It is C99 with a short, closed list of GNU extensions.
+  or that uses GNU extensions. It is C99 with the GNU extensions.
 
 The rules below hold in both. A version's page says how it is built and which features it uses.
 

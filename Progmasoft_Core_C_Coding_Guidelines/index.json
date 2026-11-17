@@ -14,7 +14,7 @@
       "id": "gnu99",
       "name": "GNU99",
       "default": false,
-      "for": "code that joins a codebase built as GNU99, such as firmware or kernel code, or needs one of its listed GNU extensions",
+      "for": "code that joins a codebase built as GNU99, such as firmware or kernel code, or that uses GNU extensions",
       "documents": ["Gnu99/LANGUAGE.md"]
     }
   ],

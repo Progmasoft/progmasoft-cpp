@@ -105,7 +105,7 @@ Each version has a page of its own with the rules that use its features:
 | Version | Covers |
 | --- | --- |
 | [C11](Progmasoft_Core_C_Coding_Guidelines/C11/LANGUAGE.md) | the default: `-std=c11 -pedantic-errors`, no extensions, `_Atomic`, `_Static_assert` and the other C11 features |
-| [GNU99](Progmasoft_Core_C_Coding_Guidelines/Gnu99/LANGUAGE.md) | for code that joins a GNU99 codebase: `-std=gnu99`, the closed list of GNU extensions, the GNU99 form of each C11 feature |
+| [GNU99](Progmasoft_Core_C_Coding_Guidelines/Gnu99/LANGUAGE.md) | for code that joins a GNU99 codebase or uses GNU extensions: `-std=gnu99`, the GNU extensions, the GNU99 form of each C11 feature |
 
 As in the C++ guidelines, `Common/` holds what applies to both versions, `C11/` and `Gnu99/` what applies to one.
 [`index.json`](Progmasoft_Core_C_Coding_Guidelines/index.json) lists every document with its chapter and versions, in
@@ -113,7 +113,7 @@ the same form as the C++ index.
 
 ### The C guidelines in short
 
-- ISO C11 with `-pedantic-errors`, no extensions but `#pragma once` and `extern "C"`; or GNU99 with a closed list of GNU
+- ISO C11 with `-pedantic-errors`, no extensions but `#pragma once` and `extern "C"`; or GNU99 with the GNU
   extensions. Clang, `clang-format` and `clang-tidy` 23.
 - Eight spaces, 100 columns, the return type on its own line, braces on their own line, and no braces around a body of
   one statement. `if(`, `return (value);`, `int* pValue`, `values[ index ]`.
