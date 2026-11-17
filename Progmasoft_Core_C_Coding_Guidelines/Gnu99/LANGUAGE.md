@@ -38,6 +38,12 @@ if(__builtin_mul_overflow(aCount, sizeof(*pValues), &bytes))
         return (false);
 ```
 
+## Variable-length arrays
+
+- **Variable-length arrays should not be used**, although C99 has them and GNU99 allows them. Their size is not
+  checked against the stack, and C11 makes them optional. A buffer whose size is known only at run time should be
+  allocated ([Memory and ownership](../Common/MEMORY-AND-OWNERSHIP.md#82-allocating)).
+
 ## The GNU99 form of the C11 features
 
 | C11 | GNU99 |
