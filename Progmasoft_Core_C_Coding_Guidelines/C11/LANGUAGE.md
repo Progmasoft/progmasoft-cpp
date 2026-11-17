@@ -1,29 +1,25 @@
 <!-- SPDX-FileCopyrightText: 2026 Progmasoft <support@progmasoft.com> -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
-# 9. Language
+# C11
 
-The guidelines are written for ISO C11: code compiles with `-std=c11 -pedantic-errors`.
+C11 is the default, for every C project. A C11 project follows every chapter of [Common](../Common/PRINCIPLES.md)
+unchanged and uses the features below.
 
-## 9.1 Extensions
+## Building
 
-- **No language extensions.** Two constructs that are not ISO C11 are part of every header and are allowed:
-  `#pragma once`, and `extern "C"` inside `#ifdef __cplusplus`, which a C compiler never sees
-  ([Files and headers](FILES-AND-HEADERS.md#42-the-start-of-a-header)).
-- **`{}` is not C11**: an empty initializer is `{ 0 }`.
+- **Code compiles with `-std=c11 -pedantic-errors`**, next to the warnings of
+  [Tooling](../Common/TOOLING.md#112-commands).
+- **No language extensions** but the two that every header uses
+  ([Language](../Common/LANGUAGE.md#91-what-every-version-allows)).
 
-## 9.2 C11 features
+## Features
 
-- **`bool`, `true` and `false` come from `<stdbool.h>`** and should be used for every truth value.
-- **`restrict` may be used only where the aliasing contract has been checked**; in a public interface, the
-  documentation states what it forbids the caller.
-- **An `_Atomic` variable is named like any other variable.** `_Atomic(Type)` should be preferred to the qualifier form.
-- **`_Thread_local` adds no prefix to a name.**
+- **`_Atomic(Type)` should be preferred to the `_Atomic` qualifier**, and `<stdatomic.h>` gives the operations.
+- **`_Thread_local` makes a variable local to a thread.**
 - **`_Alignas`, `_Alignof`, `_Static_assert`, `_Generic` and `_Noreturn` are used where they mean something.**
   `_Static_assert` always has a message that says what failed; `_Noreturn` marks only functions that never return.
-- **`volatile` does not synchronize threads.** Shared state between threads uses `_Atomic` or the functions of
-  `<threads.h>` or the platform.
-- **`auto` and `register` should not be written.**
+- **Threads and locks come from `<threads.h>` or the platform.**
 
 ```c
 _Static_assert(EXAMPLE_LIST_MAX_VALUES <= SIZE_MAX / sizeof(int),

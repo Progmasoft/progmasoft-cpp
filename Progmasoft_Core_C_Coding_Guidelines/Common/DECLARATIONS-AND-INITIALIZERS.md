@@ -63,7 +63,7 @@ const char*  pText     = "First part "
   `clang-format` runs, and adding an item then changes one line of a diff, not two.
 - **Designated initializers are used only where choosing the member is the point**, such as a `union` or a sparse
   table.
-- **Zero initialization is `{ 0 }`.** `{}` is not C11.
+- **Zero initialization is `{ 0 }`.** `{}` is not C11, and GNU99 accepts it only as an extension.
 
 ```c
 int values[ 3 ] = { 1, 2, 3 };

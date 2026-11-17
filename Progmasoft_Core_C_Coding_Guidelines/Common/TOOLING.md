@@ -44,6 +44,9 @@ clang-tidy Example.List.c -- -std=c11 -I.
 clang -std=c11 -pedantic-errors -Wall -Wextra -I. -fsyntax-only Example.List.c
 ```
 
+The commands are those of a C11 project. A GNU99 project writes `-std=gnu99` in place of `-std=c11 -pedantic-errors`
+([GNU99](../Gnu99/LANGUAGE.md#building)).
+
 `clang-format --dry-run --Werror` reports the places where the formatter's output differs from the file, including the
 few where the guidelines are right and the formatter is not ([Formatting](FORMATTING.md#what-the-tool-leaves-to-you)).
 

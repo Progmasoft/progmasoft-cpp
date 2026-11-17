@@ -10,11 +10,14 @@ layout and comments differ on purpose. A C interface that a C++ library exposes 
 
 ## 1.1 The language and the tools
 
-- **The language is ISO C11.** What C11 offers and how it is used is in [Language](LANGUAGE.md).
+- **The language is ISO C11**, or GNU99 for code that joins a codebase built as GNU99 or uses GNU extensions.
+  [Language](LANGUAGE.md) says how to choose, and the [C11](../C11/LANGUAGE.md) and [GNU99](../Gnu99/LANGUAGE.md)
+  pages what each version uses.
 - **The toolchain is LLVM 23**: Clang compiles, and `clang-format` and `clang-tidy` 23 run the profiles in
   [Formatting](FORMATTING.md#the-profile) and [Tooling](TOOLING.md#111-the-clang-tidy-profile).
-- **No language extensions**, with two exceptions that every header uses: `#pragma once`, and the conditional
-  `extern "C"` block of a public header ([Files and headers](FILES-AND-HEADERS.md)).
+- **C11 uses no language extensions**, with two exceptions that every header uses: `#pragma once`, and the
+  conditional `extern "C"` block of a public header ([Files and headers](FILES-AND-HEADERS.md)). GNU99 may use the GNU
+  extensions ([GNU99](../Gnu99/LANGUAGE.md#extensions)).
 
 ## 1.2 How the rules are written
 
