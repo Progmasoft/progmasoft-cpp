@@ -7,6 +7,13 @@ A revision of Progmasoft C/C++ Styles is named by its date. A change that requir
 
 ## Unreleased
 
+Progmasoft Core C Coding Guidelines cover GNU99 next to C11. The chapters that apply to both moved to
+`Progmasoft_Core_C_Coding_Guidelines/Common/`; `C11/LANGUAGE.md` and `Gnu99/LANGUAGE.md` hold what applies to one
+version, and Language (chapter 9) says how a project chooses. GNU99 is `-std=gnu99` with a closed list of GNU
+extensions (attributes, `__typeof__` and statement expressions inside macros, overflow built-ins, `__builtin_expect`,
+inline assembly in `static inline` functions), no variable-length arrays, and a GNU99 form of each C11 feature. No C11
+rule changed; links to `Progmasoft_Core_C_Coding_Guidelines/C11/` move to `Common/`, except `C11/LANGUAGE.md`.
+
 Progmasoft Core C Coding Guidelines are written, for C11 with LLVM 23, in
 `Progmasoft_Core_C_Coding_Guidelines/C11/`: eleven chapters, a `.clang-format` and a `.clang-tidy` profile, and an
 `index.json`. They are a style of their own; the C interfaces of C++ libraries keep following the C++ guidelines.

@@ -61,9 +61,10 @@ mixed with a change in behavior, so that review and `git blame` stay useful.
 
 ## C projects
 
-A C project adopts [Progmasoft Core C Coding Guidelines](Progmasoft_Core_C_Coding_Guidelines/C11/PRINCIPLES.md) the same way: it points to them in its
-contributing guide, copies [the `.clang-format` profile](Progmasoft_Core_C_Coding_Guidelines/C11/FORMATTING.md#the-profile) and [the `.clang-tidy`
-profile](Progmasoft_Core_C_Coding_Guidelines/C11/TOOLING.md#111-the-clang-tidy-profile), and records its deviations.
+A C project adopts [Progmasoft Core C Coding Guidelines](Progmasoft_Core_C_Coding_Guidelines/Common/PRINCIPLES.md) the same way: it points to them in its
+contributing guide, copies [the `.clang-format` profile](Progmasoft_Core_C_Coding_Guidelines/Common/FORMATTING.md#the-profile) and [the `.clang-tidy`
+profile](Progmasoft_Core_C_Coding_Guidelines/Common/TOOLING.md#111-the-clang-tidy-profile), and records its deviations.
+It names its version, C11 or GNU99, in the same guide; without one, it is C11.
 
 ## Projects that follow the guidelines
 

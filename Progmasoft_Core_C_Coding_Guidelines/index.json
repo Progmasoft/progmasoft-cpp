@@ -8,32 +8,29 @@
       "name": "C11",
       "default": true,
       "for": "every C project",
-      "documents": [
-        "C11/PRINCIPLES.md",
-        "C11/FORMATTING.md",
-        "C11/NAMING.md",
-        "C11/FILES-AND-HEADERS.md",
-        "C11/CONTROL-FLOW.md",
-        "C11/DECLARATIONS-AND-INITIALIZERS.md",
-        "C11/PREPROCESSOR.md",
-        "C11/MEMORY-AND-OWNERSHIP.md",
-        "C11/LANGUAGE.md",
-        "C11/COMMENTS-AND-DOCUMENTATION.md",
-        "C11/TOOLING.md"
-      ]
+      "documents": ["C11/LANGUAGE.md"]
+    },
+    {
+      "id": "gnu99",
+      "name": "GNU99",
+      "default": false,
+      "for": "code that joins a codebase built as GNU99, such as firmware or kernel code, or needs one of its listed GNU extensions",
+      "documents": ["Gnu99/LANGUAGE.md"]
     }
   ],
   "documents": [
-    { "id": "principles", "chapter": 1, "title": "Principles", "path": "C11/PRINCIPLES.md", "standards": ["c11"] },
-    { "id": "formatting", "chapter": 2, "title": "Formatting", "path": "C11/FORMATTING.md", "standards": ["c11"] },
-    { "id": "naming", "chapter": 3, "title": "Naming", "path": "C11/NAMING.md", "standards": ["c11"] },
-    { "id": "files-and-headers", "chapter": 4, "title": "Files and headers", "path": "C11/FILES-AND-HEADERS.md", "standards": ["c11"] },
-    { "id": "control-flow", "chapter": 5, "title": "Control flow", "path": "C11/CONTROL-FLOW.md", "standards": ["c11"] },
-    { "id": "declarations-and-initializers", "chapter": 6, "title": "Declarations and initializers", "path": "C11/DECLARATIONS-AND-INITIALIZERS.md", "standards": ["c11"] },
-    { "id": "preprocessor", "chapter": 7, "title": "Preprocessor", "path": "C11/PREPROCESSOR.md", "standards": ["c11"] },
-    { "id": "memory-and-ownership", "chapter": 8, "title": "Memory and ownership", "path": "C11/MEMORY-AND-OWNERSHIP.md", "standards": ["c11"] },
-    { "id": "language", "chapter": 9, "title": "Language", "path": "C11/LANGUAGE.md", "standards": ["c11"] },
-    { "id": "comments-and-documentation", "chapter": 10, "title": "Comments and documentation", "path": "C11/COMMENTS-AND-DOCUMENTATION.md", "standards": ["c11"] },
-    { "id": "tooling", "chapter": 11, "title": "Tooling", "path": "C11/TOOLING.md", "standards": ["c11"] }
+    { "id": "principles", "chapter": 1, "title": "Principles", "path": "Common/PRINCIPLES.md", "standards": ["c11", "gnu99"] },
+    { "id": "formatting", "chapter": 2, "title": "Formatting", "path": "Common/FORMATTING.md", "standards": ["c11", "gnu99"] },
+    { "id": "naming", "chapter": 3, "title": "Naming", "path": "Common/NAMING.md", "standards": ["c11", "gnu99"] },
+    { "id": "files-and-headers", "chapter": 4, "title": "Files and headers", "path": "Common/FILES-AND-HEADERS.md", "standards": ["c11", "gnu99"] },
+    { "id": "control-flow", "chapter": 5, "title": "Control flow", "path": "Common/CONTROL-FLOW.md", "standards": ["c11", "gnu99"] },
+    { "id": "declarations-and-initializers", "chapter": 6, "title": "Declarations and initializers", "path": "Common/DECLARATIONS-AND-INITIALIZERS.md", "standards": ["c11", "gnu99"] },
+    { "id": "preprocessor", "chapter": 7, "title": "Preprocessor", "path": "Common/PREPROCESSOR.md", "standards": ["c11", "gnu99"] },
+    { "id": "memory-and-ownership", "chapter": 8, "title": "Memory and ownership", "path": "Common/MEMORY-AND-OWNERSHIP.md", "standards": ["c11", "gnu99"] },
+    { "id": "language", "chapter": 9, "title": "Language", "path": "Common/LANGUAGE.md", "standards": ["c11", "gnu99"] },
+    { "id": "comments-and-documentation", "chapter": 10, "title": "Comments and documentation", "path": "Common/COMMENTS-AND-DOCUMENTATION.md", "standards": ["c11", "gnu99"] },
+    { "id": "tooling", "chapter": 11, "title": "Tooling", "path": "Common/TOOLING.md", "standards": ["c11", "gnu99"] },
+    { "id": "c11", "title": "C11", "path": "C11/LANGUAGE.md", "standards": ["c11"] },
+    { "id": "gnu99", "title": "GNU99", "path": "Gnu99/LANGUAGE.md", "standards": ["gnu99"] }
   ]
 }
